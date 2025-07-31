@@ -1,4 +1,3 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -14,10 +13,10 @@
   <body>
     <div class="container">
       <form id="registrationForm">
-        <h2>Register Now</h2>
+        <h2>Register Now 🚀</h2>
 
         <label for="name">Full Name</label>
-        <input type="text" id="name" placeholder="Abebe Besobela" required />
+        <input type="text" id="name" placeholder="Abebe Beso Bela" required />
 
         <label for="email">Email Address</label>
         <input
@@ -27,8 +26,39 @@
           required
         />
 
+        <label for="country">Country</label>
+        <select id="country">
+          <!-- Africa -->
+          <option value="+251">🇪🇹 Ethiopia (+251)</option>
+          <option value="+27">🇿🇦 South Africa (+27)</option>
+          <option value="+234">🇳🇬 Nigeria (+234)</option>
+
+          <!-- North America -->
+          <option value="+1">🇺🇸 United States (+1)</option>
+          <option value="+1">🇨🇦 Canada (+1)</option>
+          <option value="+52">🇲🇽 Mexico (+52)</option>
+
+          <!-- South America -->
+          <option value="+55">🇧🇷 Brazil (+55)</option>
+
+          <!-- Europe -->
+          <option value="+44">🇬🇧 United Kingdom (+44)</option>
+          <option value="+41">🇨🇭 Switzerland (+41)</option>
+          <option value="+33">🇫🇷 France (+33)</option>
+          <option value="+49">🇩🇪 Germany (+49)</option>
+          <option value="+39">🇮🇹 Italy (+39)</option>
+
+          <!-- Asia / Middle East -->
+          <option value="+971">🇦🇪 United Arab Emirates / Dubai (+971)</option>
+          <option value="+86">🇨🇳 China (+86)</option>
+          <option value="+81">🇯🇵 Japan (+81)</option>
+        </select>
+
         <label for="phone">Phone Number</label>
-        <input type="tel" id="phone" placeholder="+1234567890" required />
+        <div class="phone-wrapper">
+          <input type="text" id="countryCode" readonly />
+          <input type="tel" id="phone" placeholder="987654321" required />
+        </div>
 
         <label for="password">Password</label>
         <input

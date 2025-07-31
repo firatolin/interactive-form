@@ -1,88 +1,112 @@
-/* CSS for a modern, responsive login form with animations */
-* {
-  box-sizing: border-box;
+body {
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
-}
-
-body {
-  background: linear-gradient(to right, #eef2f3, #8e9eab);
+  background: linear-gradient(135deg, #d9a7c7, #fffcdc);
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
 }
 
 .container {
-  background: white;
-  padding: 40px;
+  background: #ffffff;
+  padding: 30px;
   border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
   width: 100%;
-  max-width: 400px;
-  animation: fadeIn 0.8s ease-in;
+  max-width: 380px;
+  animation: fadeIn 0.8s ease-in-out;
+  border: 1px solid #eee;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-h2 {
+form h2 {
   text-align: center;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
+  color: #222;
   font-weight: 600;
-  color: #333;
 }
 
 label {
-  font-size: 14px;
-  margin-bottom: 6px;
   display: block;
+  margin-top: 15px;
+  font-weight: 500;
   color: #444;
+  font-size: 14px;
 }
 
-input {
+input,
+select {
   width: 100%;
   padding: 10px 14px;
-  margin-bottom: 20px;
+  margin-top: 6px;
   border: 1px solid #ccc;
   border-radius: 10px;
-  transition: all 0.3s;
+  font-size: 14px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-input:focus {
-  border-color: #00c9a7;
+input:focus,
+select:focus {
   outline: none;
-  background-color: #f4fdfc;
+  border-color: #a78bfa;
+  box-shadow: 0 0 4px #c4b5fd;
+}
+
+.phone-wrapper {
+  display: flex;
+  gap: 8px;
+}
+
+.phone-wrapper input:first-child {
+  width: 30%;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.phone-wrapper input:last-child {
+  width: 70%;
 }
 
 button {
-  background-color: #00c9a7;
-  color: white;
-  padding: 12px;
-  border: none;
   width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  background: linear-gradient(90deg, #a78bfa, #c084fc);
+  color: #fff;
+  border: none;
   border-radius: 10px;
+  font-size: 15px;
+  font-weight: 500;
   cursor: pointer;
-  font-weight: 600;
-  transition: background-color 0.3s;
+  transition: background 0.3s ease;
 }
 
 button:hover {
-  background-color: #00b49c;
+  background: linear-gradient(90deg, #c084fc, #a78bfa);
+}
+
+select option {
+  padding: 8px;
+  background-color: #fff;
+  font-size: 14px;
 }
 
 .message {
   margin-top: 15px;
   text-align: center;
+  color: red;
+  font-weight: 500;
   font-size: 14px;
-  color: green;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

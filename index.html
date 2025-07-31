@@ -1,35 +1,48 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Interactive Form</title>
+    <title>Fancy Registration Form</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="container">
-      <h2>Registration Form</h2>
-      <form id="registrationForm" novalidate>
-        <label for="name">Name</label>
-        <input type="text" id="name" required />
-        <small class="error" id="nameError"></small>
+      <form id="registrationForm">
+        <h2>Register Now</h2>
 
-        <label for="email">Email</label>
-        <input type="email" id="email" required />
-        <small class="error" id="emailError"></small>
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="John Doe" required />
+
+        <label for="email">Email Address</label>
+        <input
+          type="email"
+          id="email"
+          placeholder="example@mail.com"
+          required
+        />
 
         <label for="phone">Phone Number</label>
-        <input type="tel" id="phone" required />
-        <small class="error" id="phoneError"></small>
+        <input type="tel" id="phone" placeholder="+1234567890" required />
 
         <label for="password">Password</label>
-        <input type="password" id="password" required />
-        <small class="error" id="passwordError"></small>
+        <input
+          type="password"
+          id="password"
+          placeholder="Enter a strong password"
+          required
+        />
 
-        <button type="submit">Submit</button>
-        <p class="success" id="successMessage"></p>
+        <button type="submit">Create Account</button>
+        <p class="message" id="message"></p>
       </form>
     </div>
+
     <script src="script.js"></script>
   </body>
 </html>

@@ -1,23 +1,24 @@
-# Interactive Form – Internship Task (Task 2)
+# 🌐 Responsive Registration Form
 
-This is a responsive **Interactive Form** built using **HTML, CSS, and JavaScript** as part of my **Frontend Development Internship at Codveda Technologies**.
-
-🔗 _(https://github.com/firatolin/interactive-form.git)_
+A sleek and modern registration form built with **HTML**, **CSS**, and **JavaScript**. It features country code selection with flags, real-time validation, and a smooth user interface that adapts well to small screens.
 
 ---
 
-## 📌 Features
+## ✨ Features
 
-- ✅ Real-time input validation
-- ✅ Dynamic error messages
-- ✅ Mobile-responsive layout
-- ✅ Clean and modern design
-- ✅ No page reloads on validation
+- 🎨 Clean and modern UI with gradient background
+- 🌍 Country selector with flags and dial codes
+- 📱 Responsive design (mobile-friendly)
+- 🔒 Form validation:
+  - Valid email address format
+  - Valid phone number (digits only)
+  - Password must be at least 6 characters
+- ✅ Real-time feedback messages (error/success)
 
 ---
 
-## 🛠 Technologies Used
+## 🚀 Technologies Used
 
 - HTML5
-- CSS3 (with media queries for responsiveness)
-- Vanilla JavaScript (event listeners, regex validation)
+- CSS3 (Custom Styling)
+- JavaScript (Vanilla)

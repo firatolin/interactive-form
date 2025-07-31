@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const fullPhone = countryCode + phone;
 
     showSuccess(
-      `🎉 Welcome, ${name}! Your registration was successful. Confirmation has been sent to: ${fullPhone}`
+      `Welcome, ${name}! Your registration was successful. Confirmation has been sent to: ${fullPhone}`
     );
     form.reset();
     updateCountryCode(); // reset country code after form reset

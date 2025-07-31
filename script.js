@@ -8,22 +8,27 @@ document.addEventListener("DOMContentLoaded", () => {
   const passwordInput = document.getElementById("password");
   const message = document.getElementById("message");
 
-  // Initialize country code input with default selected option
   function updateCountryCode() {
     countryCodeInput.value = countrySelect.value;
   }
 
+  // Initialize country code input on page load
   updateCountryCode();
 
+  // Update country code when select changes
   countrySelect.addEventListener("change", updateCountryCode);
 
   function showError(msg) {
-    message.style.color = "red";
+    message.classList.remove("success");
+    message.classList.add("error");
+    message.style.color = "#a15e4a"; // brick red
     message.textContent = msg;
   }
 
   function showSuccess(msg) {
-    message.style.color = "green";
+    message.classList.remove("error");
+    message.classList.add("success");
+    message.style.color = "#5a6b44"; // olive green
     message.textContent = msg;
   }
 
@@ -32,9 +37,8 @@ document.addEventListener("DOMContentLoaded", () => {
     return re.test(email);
   }
 
-  // Validate phone: only digits, length between 6 and 15
   function validatePhone(phone) {
-    const re = /^[0-9]{6,15}$/;
+    const re = /^[0-9]{9}$/;
     return re.test(phone);
   }
 
@@ -48,22 +52,22 @@ document.addEventListener("DOMContentLoaded", () => {
     const password = passwordInput.value;
 
     if (!name || !email || !phone || !password) {
-      showError("❌ Please fill in all fields.");
+      showError("Please fill in all fields.");
       return;
     }
 
     if (!validateEmail(email)) {
-      showError("📧 Invalid email format.");
+      showError("Invalid email.");
       return;
     }
 
     if (!validatePhone(phone)) {
-      showError("📞 Invalid phone number.");
+      showError("Invalid phone number.");
       return;
     }
 
-    if (password.length < 6) {
-      showError("🔒 Password must be at least 6 characters.");
+    if (password.length < 8) {
+      showError("Password must be at least 8 characters.");
       return;
     }
 
@@ -73,6 +77,6 @@ document.addEventListener("DOMContentLoaded", () => {
       `🎉 Welcome, ${name}! Your registration was successful. Confirmation has been sent to: ${fullPhone}`
     );
     form.reset();
-    updateCountryCode();
+    updateCountryCode(); // reset country code after form reset
   });
 });
